@@ -2,6 +2,8 @@
 FROM debian:latest
 # copy code to container
 COPY . /app
+# set working directory
+WORKDIR /app
 # install make
 RUN apt-get update && apt-get install -y make
 RUN make
